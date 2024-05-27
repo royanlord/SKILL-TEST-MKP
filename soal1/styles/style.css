@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 2rem auto;
+    width: 75vw;
+    padding: 5vh 12vw;
+    background-color: #eeeeee;
+    border-radius: 5%;
+    border: 2px solid #D9D9D9;
+}
+
+#content-1 {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url("../assets/images/pizza-theme.svg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#content-1 .card-pizza {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#content-1 .card-pizza .card {
+    border: 3px solid black;
+    width: 30%;
+    background-color: #ffffff;
+}
+
+#content-1 .card-pizza .card .card-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 15px 0;
+}
+
+#content-1 .card-pizza .card img {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+#content-1 .card-pizza .card img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#content-1 .card-pizza .card h4 {
+    text-align: center;
+}
+
+#content-1 .card-pizza .card p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#content-1 .card-pizza .card input[type="radio"] {
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+#content-2 {
+    display: none;
+    margin-top: 35px;
+}
+
+#content-3, #content-4 {
+    margin-top: 35px;
+}
+
+#content-2 .pizza-size {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#content-2 .pizza-size .size {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#content-2 .pizza-size h3 {
+    margin-top: 5px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#content-2 .pizza-size input[type="radio"] {
+    cursor: pointer;
+}
+
+#content-3 .list-toppings table tr td {
+    width: 20%;
+    font-size: 1.1rem;
+    padding: 2px 0;
+}
+
+#content-3 .list-toppings input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#content-3 .list-toppings input[type="checkbox"]:disabled + label {
+    color: grey;
+}
+
+#content-4 #total-price {
+    margin-top: 5px;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+        width: 80vw;
+    }
+
+    #content-1 .card-pizza .card {
+        width: 30%;
+    }
+
+    #content-1 .card-pizza {
+        flex-wrap: wrap;
+    }
+
+    #content-2 .pizza-size .size {
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+    }
+
+    #content-1 .card-pizza {
+        flex-direction: column;
+    }
+
+    #content-1 .card-pizza .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

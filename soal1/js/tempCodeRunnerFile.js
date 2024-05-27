@@ -1,0 +1,3 @@
+totalPrice()
+createNewArray()
+ascSortProducts()
