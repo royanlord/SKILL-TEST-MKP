@@ -51,6 +51,7 @@ const products = [
 
 const totalPrice = () => {
     const total = products.reduce((sum, product) => sum + product.price, 0)
+    console.log("SOAL 1");
     console.log("Total harga semua produk: "+total);
 }
 
@@ -59,6 +60,7 @@ const createNewArray = () => {
     const product = products.filter(product => product.price > 100)
     // console.log(product);
     newArray.push(...product)
+    console.log("SOAL 2");
     console.log("Produk dengan harga di atas 100 adalah sebagai berikut: ");
     console.table(newArray);
     countAverage(newArray)
@@ -67,11 +69,13 @@ const createNewArray = () => {
 const countAverage = (array) => {
     const total = array.reduce((sum, product) => sum + product.price, 0)
     const average = total / array.length
+    console.log("SOAL 3");
     console.log("Rata-rata harga produk: "+average);
 }
 
 const ascSortProducts = () => {
     const sortedProducts = products.sort((a, b) => a.price - b.price)
+    console.log("SOAL 4");
     console.log("Produk diurutkan dari harga termurah: ");
     console.table(sortedProducts);
 }
@@ -89,6 +93,7 @@ const categoryProducts = () => {
         return product.category === "Home Appliances"
     })
 
+    console.log("SOAL 5");
     console.log("Jumlah produk kategori Fashion: "+fashions.length);
     console.table(fashions);
     console.log("");
@@ -100,6 +105,7 @@ const categoryProducts = () => {
 }
 
 const changeNameProduct = () => {
+    console.log("SOAL 6");
     const updateProducts = products.map(product => {
         if (product.price < 50) {
             return {...product, name: "Produk Hemat"}
@@ -110,6 +116,7 @@ const changeNameProduct = () => {
         }
     })
 
+
     console.table(updateProducts);
 }
 
@@ -118,16 +125,23 @@ const findProduct = () => {
     const nameProduct = 'lApToP'
     const product = products.find(product => product.name.toLowerCase() === nameProduct.toLowerCase())
 
+    console.log("SOAL 7");
     if (product) {
-        console.log(product);
+      console.log("Produk dicari: "+nameProduct.toLowerCase());
+      console.table(product);
     } else {
-       console.log("Produk tidak ditemukan")
+      console.log("Produk tidak ditemukan")
     }
 }
 
 totalPrice()
+console.log("");
 createNewArray()
+console.log("");
 ascSortProducts()
+console.log("");
 categoryProducts()
+console.log("");
 changeNameProduct()
+console.log("");
 findProduct()
